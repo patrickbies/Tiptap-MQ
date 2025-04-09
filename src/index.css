@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+* {
+  outline: none
+} 
+
+.customNode {
+  display: inline-flex;
+  flex-direction: column;
+}

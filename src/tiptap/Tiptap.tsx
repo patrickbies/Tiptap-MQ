@@ -1,17 +1,18 @@
-import { EditorProvider } from '@tiptap/react'
-import StarterKit from '@tiptap/starter-kit'
+// Editor.tsx
+import React from 'react';
+import { EditorContent, useEditor } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import { MathBlock } from './MathBlock';
 
-const extensions = [StarterKit]
+const Editor: React.FC = () => {
+  const editor = useEditor({
+    extensions: [
+      StarterKit,
+      MathBlock,
+    ]
+  });
 
-const Tiptap = () => {
-  return (
-    <EditorProvider
-      extensions={extensions}
-      editorContainerProps={{
-        className: 'border-1 border-black p-2 outline-none',
-      }}
-    />
-  )
-}
+  return <EditorContent editor={editor} className='border-1 border-black p-2 outline-none'/>;
+};
 
-export default Tiptap
+export default Editor;

@@ -1,3 +1,4 @@
+// App.tsx
 import Tiptap from "./tiptap/Tiptap"
 
 function App() {
